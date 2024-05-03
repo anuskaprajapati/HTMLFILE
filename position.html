@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position in CSS</title>
+        <style>
+            .container
+            {
+             width: 300px;
+             height: 600px;
+             background-color: gainsboro;
+             margin: 100px;   
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+            }
+            .blueviolet{
+                background-color: blueviolet;
+                position: relative;
+                left: 100px;
+                top: 100px;
+            }
+            .yellowgreen{
+                background-color: yellowgreen;
+                position: sticky;
+                top: 50px;
+            }
+            .lightgreen{
+                background-color: lightgreen;
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+            }
+            .skyblue{
+                background-color: skyblue;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            .space{
+                height: 300vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box blueviolet"></div>
+            <div class="box yellowgreen"></div>
+            <div class="box lightgreen"></div>
+            <div class="box skyblue"></div>
+        </div>
+    </body>
+</html>
