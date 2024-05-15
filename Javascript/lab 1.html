@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+<body>
+    <!-- for scoring marks, draw diagram and write codes -->
+    <p id="result"></p>
+    <p id="message"></p>
+    <script>
+        alert("Its me, Hi!");
+        document.write("Hello");
+        // (variable declaration) var for global scope. let also for same purpose but has smaller scope
+        var message = document.getElementById("message");
+        message.innerHTML = "Its me, Hi!";
+    </script>
+
+    <script>
+        // euta html doc ma multiple script tag raakhna milcha
+        // typescript ko subset is javascript
+        var a;
+        let b;
+        a = 10;
+        b = 20;
+        document.write("value of a " +a);
+        document.write("value of b " +b);
+        document.write("<br>");
+        document.getElementById("result").innerHTML = a+b;
+    </script>
+</body>
+</html>
