@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        h1{
+            background-color: rgb(14, 14, 14);
+            text-align: center;
+            color: white;
+        }
+        button{
+            background-color: rgb(17, 142, 220);
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+        <h1>Email Validation</h1>
+        <br><br>
+    <form onsubmit="return validation()">
+        <div>
+        <label>Email ID: </label>
+        <input id="emailcheck" placeholder="Email" type="text">
+            <span id="showmsg" class="text"></span>
+    </div>
+    <button onclick="validation()" type="button">Submit</button>
+    </form>
+    <script type="text/javascript">
+        function validation(){
+            var emailcheck=document.getElementById("emailcheck").value;
+            var pattern= /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+            if(pattern.test(emailcheck)){
+                document.getElementById('showmsg').innerHTML = "You have providede a valid Email ID";
+                return true;
+            }
+            else{
+                document.getElementById('showmsg').innerHTML = "* Sorry incorrect Email ID";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
