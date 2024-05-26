@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide using jquery</title>
+</head>
+<body>
+        <script src="jquery.js"></script>
+        <style>
+            #box{
+                height: 300px;
+                width: 300px;
+                background-color: rgb(185, 16, 242);
+            }
+        </style>
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+        $("#box").toggle();
+        if(document.getElementById('box').style.display=="none"){
+        $(this).html("show");
+        }
+        else{
+            $(this).html("hide");
+        }
+        });
+    });
+    </script>
+    <div id="box"></div>
+    <button id="hide">Show/Hide</button>
+</body>
+</html>
