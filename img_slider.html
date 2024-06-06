@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Slider</title>
+</head>
+<script src="jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
+<body>
+    <div class="slider">
+        <figure>
+            <img src="image1.jpg">
+            <img src="image2.jpg">
+            <img src="image3.jpg">
+            <img src="image4.jpg">
+            <img src="image5.jpg">
+        
+        </figure>
+        <button class="btn-prev"><i class="fa fa-arrow-circle-left"></i></button>
+        <button class="btn-next"><i class="fa fa-arrow-circle-right"></i></button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            x=0;
+            $('.btn-next').click(function(){
+                x=(x<=300)?(x+100):0;
+                $('figure').css('left', -x+"%");
+            });
+            $('.btn-prev').click(function(){
+                x=(x>=100)?(x-100):400;
+                $('figure').css('left', -x+"%");
+            });
+        });
+        
+    </script>
+    <style>
+    .slider{
+        width: 50vh;
+        height: 800%;
+        margin: 50 px auto;
+        position: relative;
+        box-shadow: 0px 0px 10px 3px grey;
+        overflow: hidden;
+        border: 5px solid #3949ab;
+        
+    }
+    .slider figure{
+        margin: 0px;
+        position: relative;
+        width: 500%;
+        left: 0px;
+        transition: 1s ease-in-out;
+    }
+    .slider figure img{
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+    .btn-next, .btn-prev{
+        position: absolute;
+        top: 45%;
+        cursor: pointer;
+        color: white;
+        background: #3949ab;
+        padding: 20px;
+        font-size: 50px;
+        border: none;
+    }
+    .btn-next{
+        right: 0px;
+    }
+    .btn-prev{
+        left: 0px;
+    }
+</style>
+</body>
+</html>
