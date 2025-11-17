@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Slider</title>
+    <style>
+        .slider {
+            width: 125px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+        .slider img.active {
+            display: block;
+        }
+        #prev, #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }  </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          let currentIndex = 0;
+          const images = $('.slider img');
+          const imageCount = images.length;
+          function showImage(index) {
+             images.removeClass('active');
+             images.eq(index).addClass('active');
+          }
+          $('#next').click(function() {
+            currentIndex = (currentIndex + 1) % imageCount;
+            showImage(currentIndex);
+          });
+
+            $('#prev').click(function() {
+                currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+                showImage(currentIndex);
+            });
+        showImage(currentIndex);
+        });  </script>
+</head>
+<body> 
+    <div class="slider">
+        <img src="image3.jpg" alt="Image 1" class="active">
+        <img src="image4.jpg" alt="Image 2">
+        <img src="image5.jpg" alt="Image 3">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </div>
+</body>
+</html>

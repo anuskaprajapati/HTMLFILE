@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types Demonstration</title>
+    <!--External CSS (Embedded within the same file for demonstration)-->
+    <style>
+        .external-css-eg {
+            color: black;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+        <!--Internal or Embedde CSS-->
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            .internal-css-eg {
+                color: #0066cc;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+</head>
+<body>
+    <h1>CSS Types Demonstration</h1>
+    <!--Inline CSS Eg-->
+    <p style="color: rgb(249, 123, 13); font-size: 20px; text-align: center;">
+        This is an example of Inline CSS. The text is styled directly within the HTML tag.
+    </p>
+    <!--Internal or Embedde CSS EG-->
+    <div class="internal-css-eg">
+        This is an example of Internal or Embedded CSS. The styles are defined within 
+        the <style></style>tags in the <head></head>section of the HTML document.
+    </div>
+    <!--External CSS Eg (The external styles are embedded here)-->
+    <div class="external-css-eg">
+        This is an example of External CSS. The styles are defined in an external 
+        stylesheet linked to this HTML document.
+    </div>
+</body>
+</html>

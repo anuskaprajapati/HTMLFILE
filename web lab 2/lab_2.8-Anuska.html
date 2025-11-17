@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Operation</title>
+    <script>
+        //Function to set a cookie
+        function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); 
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = `${name}=${value};${expires};path/`;
+        console.log(`Cookie set: ${name}=${value}; expires in ${days} days`);
+}
+//Function to get a cookie by name
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(nameEQ) == 0) {
+            return cookie.substring(namEQ.length, cookie.length);
+    }
+}
+    return null;
+}
+//Function to delete a cookie by name
+function deleteCookie(name) {
+    setCookie(name, "", -1);   
+}
+//Function to test cookie operations
+function testCookies() {
+setCookie("username", "Anuska Prajapati",5);
+const username = getCookie("username");
+deleteCookie("username");
+const deleteUsername = getCookie("username");
+if(deleteUsername) {
+    console.log(`Retrieved cookie: Username is ${deleteUsername}`);
+} else {
+ console.log("Username cookie not found after deletion");
+}
+}
+window.onload = testCookies;
+</script>
+</head>
+<body>
+   
+</body>
+</html>

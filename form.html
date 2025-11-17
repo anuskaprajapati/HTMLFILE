@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    body {
+        font-family: Merriweather;
+        background-color: #f4f4f4;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .container {
+        width: 625px;
+        margin: 50px auto;
+        background: #c1d1e9;
+        padding: 60px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(5, 5, 5, 10);
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    } 
+
+    /* Displaying  radio buttons inline i.e in same line */
+   input[type="checkbox"], input[type="radio"] {
+        display: inline-block;
+        vertical-align: middle; /* Align radio buttons vertically */
+        height: 16px;
+        width: 16px;
+    }
+
+    /* spacing between radio buttons and labels */
+    label {
+        display: inline-block;
+        width: 240px;
+        padding: 6px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 6px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .form-element{
+    display: flex;}
+    .form-element label{
+    flex: 0 0 120px;
+    text-align: left;
+    margin-right: 10px;}
+
+</style>
+</head>
+<body>
+    <form action="" method="" enctype="multiport/form-data"></form>
+    <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+    </audio>
+    <video controls width="400px" height="100px">
+        <source src="sample-video.mp4">
+    </video>
+<div class="container">
+    <h2>Registration Form</h2>
+    <form action="" method="">
+        <div class="form-element">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" autofocus>
+        </div>
+
+        <div  class="form-element">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname"/>
+        </div> 
+
+        <div class="form-element">   
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" disabled>
+        </div>
+
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+        </div> 
+
+        <div class="form-element">
+            <label>Gender</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+        <div class="form-element">
+            <label>Education</label>
+            <input type="radio" id="SEE" name="education" value="SEE" required>
+            <label for="SEE">SEE</label>
+            <input type="radio" id="+2" name="education" value="+2" required>
+            <label for="+2">+2</label>
+            <input type="radio" id="bachelor" name="education" value="bachelor" required>
+            <label for="bachelor">Bachelor</label>
+            <input type="radio" id="master" name="education" value="master" required>
+            <label for="master">Masters</label>
+        </div>
+        <div class="form-element">
+            <label>Zone</label>
+            <select>
+                <option value="">Select Zone</option>
+                <option value="Bagmati">Bagmati Pradesh</option>
+                <option value="Gandaki">Gandaki Pradesh</option>
+                <option value="Lumbini">Lumbini Pradesh</option>
+                <option value="Lalitpur">Karnali Pradesh</option>
+            </select>
+        </div>
+        <div>
+            <label>Profile Picture</label>
+            <input type="file" name="profile_pic">
+        </div>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</body>
+</html>

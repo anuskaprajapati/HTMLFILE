@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining</title>
+    <style>
+        #content {
+            background-color: rgb(208, 208, 219);
+            padding: 20px;
+            width: 300px;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function toggleContent() {
+                $('#content').slideDown(500)
+                .delay(1000)
+                .slideUp(500);
+            }
+            $('#toggleButton').click(function() {
+                toggleContent();
+            });
+        }); </script>
+</head>
+<body>
+    <h1>Chaining Example</h1>
+    <button id="toggleButton">Toggle Content</button>
+    <div id="content">
+        <h2>DTD</h2>
+        <p>DTD stands for Document Type Definition.</p>
+    </div>
+</body>
+</html>

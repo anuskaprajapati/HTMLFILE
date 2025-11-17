@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Layout</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position:sticky;
+    width: 100%;
+  }
+ header{
+    top:0;
+ }
+
+
+  footer {
+    bottom: 0;
+  }
+
+  .logo {
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    height: 50px; 
+    width: 100px; 
+    border-radius: 50%; /* Make the logo circular */
+    overflow: hidden; /* Hide any content that overflows */
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .container {
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+    display: flex;
+  }
+
+  .left-panel, .right-panel, .content {
+    padding: 20px;
+    height: 800px; 
+    overflow-y: auto; /* Enablig  scrollbar if content exceeds panel height */
+    box-sizing: border-box; /
+  }
+
+  .left-panel {
+    background-color: #f2f2f2;
+    flex: 1; 
+  }
+
+  .right-panel {
+    background-color: #e6e6e6;
+    flex: 2; 
+  }
+
+  .content {
+    background-color: #ffc0cb;
+    flex: 7; /* forr panel size */
+  }
+  nav {
+    display: inline-block;
+    top: 20px; /*for padding*/
+    right: 20px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    }
+
+    nav ul li a:hover {
+    text-decoration: underline;
+    padding: 10px 20px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="C:\Users\ASUS\OneDrive\Pictures\logo.jpg" alt="Logo">
+        </div>
+
+        <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+      </header>
+
+<div class="container">
+  <div class="left-panel">
+    Left Panel
+  </div>
+  <div class="content">
+    Content Panel
+  </div>
+  <div class="right-panel">
+    Right Panel
+  </div>
+</div>
+
+<footer>
+  &copy; 2024 Anuska Prajapati
+</footer>
+
+</body>
+</html>

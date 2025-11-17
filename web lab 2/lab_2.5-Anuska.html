@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" email="email">
+        <span id="emailError" class="error"></span>
+        <br><br>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateForm() {
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            let valid = true;
+            if (name === "") {
+                document.getElementById("nameError").innerHTML = "*Name is required";
+                valid = false;
+            }
+            const emailPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email === "") {
+                document.getElementById("emailError").innerHTML = "*Email is required";
+                valid = false;
+        }else if (!emailPattern.test(email)) {
+            document.getElementById("emailError").innerHTML = "*Invalid email format";
+                valid = false;
+        }
+        if (password === "") {
+                document.getElementById("passwordError").innerHTML = "*Password is required";
+                valid = false;
+        }else if (password.length < 8) {
+            document.getElementById("passwordError").innerHTML = "*Password must be at least 8 characters long";
+                valid = false;
+        }
+        return valid;
+    }
+    </script>
+</body>
+</html>

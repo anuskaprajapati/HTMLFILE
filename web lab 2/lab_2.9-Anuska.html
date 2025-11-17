@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Selection Example</title>
+    <script src="C:\Users\Asus\OneDrive\anuska\Desktop\Documents\Web Tech\jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            function getSelectedValueAndText() {
+                var selectedOption = $('#myDropdown').find('option:selected');
+                var selectedValue = selectedOption.val();
+                var selectedText = selectedOption.text();
+                $('#selectedValue').text('Selected Value: ' + selectedValue);
+                $('#selectedText').text('Selected Text: ' + selectedText);
+            }
+            $('#myDropdown').change(function() {
+                getSelectedValueAndText();
+            });  getSelectedValueAndText();
+        });  </script>
+</head>
+<body> <h1>Dropdown Selection Example</h1>
+    <select id="myDropdown">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <div id="selectedInfo">
+        <p id="selectedValue">Selected Value: </p>
+        <p id="selectedText">Selected Text: </p>
+    </div>
+</body>
+</html>

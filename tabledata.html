@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data entry table</title>
+    <style>
+       
+        .table-container {
+            text-align: center; 
+        }
+
+        
+        table {
+            margin: auto; 
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 2.2em; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+        table tr:nth-child(even) {
+            background-color: pink; 
+        }
+
+        table tr:nth-child(odd) {
+            background-color: plum; 
+        }
+        body{
+        margin: 0;
+            padding: 0;
+            background-image: url('background.png'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table border="1" cellspacing="2px" cellpadding="15px"> 
+            <caption style="color: blue;">CUSTOMER DATA ENTRY</caption>
+            <tr>
+                <th>S.N.</th>
+                <th colspan="2">NAME</th>
+                <th>PHONE NO.</th>
+                <th>ADDRESS</th>
+                <th>REMARKS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Aakash</td>
+                <td>Maharjan</td>
+                <td>9841578952</td>
+                <td>Ason</td>
+                <td>Out of valley</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bipaswi</td>
+                <td>Thapa</td>
+                <td>9802140157</td>
+                <td>Swayambhu</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Geeta</td>
+                <td>Khadka</td>
+                <td>9808947857</td>
+                <td>Lalitpur</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Anuska</td>
+                <td>Prajapati</td>
+                <td>9842976882</td>
+                <td>Madhyapur Thimi</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Salma</td>
+                <td>Shrestha</td>
+                <td>9856470909</td>
+                <td>Bhaktapur</td>
+                <td>Out of valley</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

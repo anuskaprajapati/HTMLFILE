@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Content Loader Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function loadContent() {
+                $.ajax({
+                    url: 'data.html',
+                    type: 'GET',
+                    success: function(data) {
+                        $('#content').html(data);
+                    },
+                    error: function() {
+                        $('#content').html('<p>Error loading content.</p>');
+                    }
+                });
+            }
+            $('#loadButton').click(function() {
+                loadContent();
+            });
+        }); </script>
+</head>
+<body>
+    <h1>AJAX Content Loader Example</h1>
+    <button id="loadButton">Load Content</button>
+    <div id="content">
+    </div>
+</body>
+</html>

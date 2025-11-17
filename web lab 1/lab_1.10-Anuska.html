@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin: 0px;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(5, 5, 5, 10);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="username"]   
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }     
+        /* Displaying  radio buttons inline i.e in same line */
+       input[type="checkbox"], input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle; /* Align radio buttons vertically */
+            height: 16px;
+            width: 16px;
+        }    
+        /* spacing between radio buttons and labels */
+        label {
+            display: inline-block;
+            width: 240px;
+            padding: 6px;
+        }        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #d7350d;
+            color: white;
+            padding: 6px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }       
+        input[type="submit"]:hover {
+            background-color: #16ffe0;
+        }
+        .form-element{
+        display: flex;}
+        .form-element label{
+        flex: 0 0 120px;
+        text-align: left;
+        margin-right: 10px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="" method="post">            
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" autofocus>
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required>           
+                 <label for="username">Username</label>
+                 <input type="text" id="username" name="lastname" required>             
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>         
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>  
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

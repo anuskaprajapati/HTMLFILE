@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Frames Layout</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            height: 100vh;
+            margin: 0;
+        }
+        .left, .center, .right {
+            padding: 20px;
+        }
+        .left {
+            background-color: rgba(88, 86, 86, 0.318);
+        }
+        center  {
+            background-color: gainsboro;
+        }
+        .right {
+            background-color: gainsboro;
+        }
+    </style>
+    <script>
+        function showHighlights(content) {
+            document.getElementById('highlights').innerHTML = content;
+        }
+    </script>
+</head>
+<body>
+    <div class="left">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#" onclick="showHighlights('This is highlight content 1.'); return false;">HTML</a></li>
+            <li><a href="#" onclick="showHighlights('This is highlight content 2.'); return false;">CSS</a></li>
+            <li><a href="#" onclick="showHighlights('This is highlight content 3.'); return false;">Javascript</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <h2>Body</h2>
+        <p>HTTP is based on the request-response communication model.</p>
+    </div>
+    <div class="right" id="highlights">
+        <h2>highlights</h2>
+        <p>Cookie is the variable that is stored on the visitor's computer.</p>
+    </div>
+</body>
+</html>

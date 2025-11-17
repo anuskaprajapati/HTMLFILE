@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sequential Animation</title>
+    <style>
+        .animate-box {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(18, 177, 177);
+            opacity: 1;
+            transition: all 0.2s ease;
+        }
+        #animateButton {
+            margin-top: 10px;
+            padding: 10px 10px;
+            font-size: 9px;
+            cursor: pointer;
+        } </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#animateButton').click(function() {
+                    $('.animate-box')
+                    .animate({ width: '50px' }, 1000)
+                    .animate({ height: '50px' }, 1000)
+                    .animate({ opacity: 0.5 }, 1000)
+                    .animate({ width: '100px' }, 1000)
+                    .animate({ height: '100px' }, 1000)
+                    .animate({ opacity: 1 }, 1000)
+                }); });
+        </script> </head>
+<body>
+    <div class="animate-box"></div> 
+    <button id="animateButton">Animate</button> 
+</body>
+</html>

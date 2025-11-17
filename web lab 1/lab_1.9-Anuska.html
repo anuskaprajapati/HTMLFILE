@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .marksheet-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            width: 80%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .marksheet-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .marksheet-header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        .marksheet-header h2 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .student-info {
+            margin-bottom: 20px;
+        }
+        .student-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .student-info span {
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        tfoot {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="marksheet-container">
+        <div class="marksheet-header">
+            <h1>High School Examination</h1>
+            <h2>Mark Sheet</h2>
+        </div>
+    
+        <div class="student-info">
+            <p><span>Name:</span> Anuska Prajapati</p>
+            <p><span>Roll Number:</span> 17605091</p>
+            <p><span>Class:</span> 11</p>
+            <p><span>School:</span> Triton International SS/College</p>
+        </div>
+    
+        <table>
+            <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Marks Obtained</th>
+                <th>Maximum Marks</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mathematics</td>
+                <td>85</td>
+                <td>100</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>90</td>
+                <td>100</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td>88</td>
+                <td>100</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Computer</td>
+                <td>92</td>
+                <td>100</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>78</td>
+                <td>100</td>
+                <td>B+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> <td colspan="3">Total Marks</td>
+            <td>433</td>
+        </tr>
+        <tr>
+            <td colspan="3">GPA</td>
+            <td>3.46</td>
+        </tr>
+        </tfoot>
+    </table>
+    </div>
+</body>
+</html>
